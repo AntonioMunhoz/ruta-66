@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset='utf-8'>
+    <title>RUTA 66</title>
+    <link rel="stylesheet" href="estilo.css">
+
+    <script>
+        window.onload = function() {
+         var nombre = prompt ("Escribe tu nombre: ");
+         if ((nombre != '') && (nombre != null)) { 
+            document.getElementById("saludo").innerHTML = "¡Hola " + nombre + "!";
+         }
+        }; 
+         function VerQueEs(){
+            document.getElementById("quees").style.display = 'block';
+            document.getElementById("quever").style.display = 'none';
+            document.getElementById("dondeesta").style.display = 'none';
+         };
+         function VerQueVer(){
+            document.getElementById("quees").style.display = 'none';
+            document.getElementById("quever").style.display = 'block';
+            document.getElementById("dondeesta").style.display = 'none';
+         };
+         function VerDondeEsta(){
+            document.getElementById("quees").style.display = 'none';
+            document.getElementById("quever").style.display = 'none';
+            document.getElementById("dondeesta").style.display = 'block';
+         };    
+        </script>
+        
+</head>
+
+<body>
+
+ <header>   
+   <h1>Ruta 66</h1>
+   <h3 id="saludo">¡Hola viajero!</h3>
+    <button onclick="VerQueEs();">¿Qué es?</button>
+    - 
+    <button onclick="VerQueVer();">¿Qué ver?</button>
+    -
+    <button onclick="VerDondeEsta();">¿Dónde está?</button>
+</header>
+
+<main>
+
+   <div id="quees" style="display: block;">
+    <h2>¿Qué es?</h2>
+   <p><b>La legendaria carretera que atraviesa Estados Unidos</b></p>
+
+   <p>La Ruta 66 es un mito en sí misma, un icono dentro de los Estados Unidos y no es para menos. Los norteamericanos la llaman “The Mother Route” (la Ruta Madre) porque es una de las carreteras federales originales y porque cruza gran parte del país. Es un recorrido mítico y muy atractivo. Un road trip maravilloso y mágico que jamás olvidarás. 3.945 kilómetros apasionantes en los que te cruzarás con lugares fascinantes, únicos y auténticos que te atraparán y te conquistarán. Además, el encanto de este viaje es que también encontrarás personas fascinantes. Unos que hacen el mismo viaje que tú y otros que tratan de mantener el espíritu original de la “Ruta 66”, ya sea con sus negocios o con su simple testimonio. No dudes en preguntar para que te cuenten los secretos mejor guardados de “The main street of America”, otra forma de llamarla. Se trata de un viaje que permite un alto grado de libertad, puesto que podrás parar donde más te apetezca, en cualquier rincón y en cualquier pueblo que ni siquiera salga en el mapa. Pero no te preocupes porque la “Ruta 66” está perfectamente indicada y transita habitualmente paralela a una autovía, que te permitirá recuperar tiempo si un día te entretienes demasiado. Además, tendrás la oportunidad de visitar dos grandes ciudades como son Chicago y Las Vegas y pasar una noche en el Gran Cañón, una auténtica maravilla de la naturaleza. </p>
+   <br>
+   <p><b>Más Información:</b></p>
+   <ul>
+    <li><a href="https://es.wikipedia.org/wiki/Ruta_66_(Estados_Unidos)" target="_blank"><b>Ampliar en la Wikipedia.</b></a></li>
+    <li><a href="https://www.molaviajar.com/guia-ruta-66-que-recorrido-hacer-y-presupuesto-necesario/" target="_blank">Guía de la ruta 66</a></li>
+    <li><a href="https://www.tripadvisor.es/Restaurant_Review-g672739-d8041198-Reviews-Route_66_Tabernas-Tabernas_Province_of_Almeria_Andalucia.html" target="_blank">La ruta 66 en Almería ;)</a></li>   
+   </ul>
+    <br> 
+   <p>Mapa de la ruta 66 y sus lugares de interés:</p>
+   <img src="MapaRuta66.png">
+   </div>
+   
+   <div id="quever" style="display: none;">
+   <h2>¿Qué ver?</h2>
+   <h3>Imagenes</h3>
+   <p>Carretera típica de la Ruta 66.</p>
+   <img src="carretera.png">
+   <br>
+   <p>Famoso logotipo de la Ruta 66.</p>
+   <img src="cartel.jpg"> 
+   <h3>20 curiosidades sobre la ruta 66</h3>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/sECwwY6_M9o?si=-2q2drxLzM37vMCD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   </div>
+   
+   <div id="dondeesta" style="display: none;">
+   <h2>¿Dónde está?</h2>
+   <p>Esta ruta transcurre integramente por Estados Unidos</p>
+   <p>Mapa y sus puntos de interés</p>
+   <iframe src="https://www.google.com/maps/d/embed?mid=1i2ffJykNCW4hAGjESkTZhqnnP4U325Te&ehbc=2E312F" width="640" height="480"></iframe>
+   </div>
+</main>
+
+<footer>
+    <p>Otras versiones de la web:</p>
+    <ul>
+        <li><a href="index.html">HTML</a></li>
+        <li><a href="dos.html">HMTL + CSS</a></li>
+        <li><a href="tres.html">HTML + CSS + JavaScript</a></li>
+    </ul>
+<p>&copy; Antonio Muñoz Lucas</p>
+ 
+</footer>
+</body>
+</html>

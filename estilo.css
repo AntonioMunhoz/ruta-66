@@ -1,0 +1,31 @@
+h1, h2, h3 {
+    color: red;
+}  
+body {
+    font-family: "Arial", "Palatino", serif;
+    background-color: whitesmoke;
+    margin: 20px;
+}
+main {
+    background-color: burlywood;
+    padding: 7px;
+}
+header {
+    background-color: lightgray;
+    font-size: 120%;
+    padding: 7px;
+}
+header a {
+  text-transform: uppercase;
+  text-decoration: underline red;
+}
+header button {
+    text-transform: uppercase;
+    font-size: 120%;
+    background-color: antiquewhite;
+}
+footer {
+    background-color: lightgray;
+    font-size: 80%;
+    padding: 7px;
+}
