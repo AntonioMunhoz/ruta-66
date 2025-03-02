@@ -1,36 +1,31 @@
 <html>
-    <head>
-        <title>Mi Página cinco</title> 
-        <link rel="stylesheet" href="estilo.css">
-    </head>
-    <body>    
-   
-        <h1> Mi quinta WEB</h1>
-        <script>
-        var edad = prompt ("¿Cuantos años tienes?");       
-        edad = Number(edad);
-          if (edad == 18) 
-              {
-              document.write("TIENES 18 AÑOS");
-              }
-              else {
-                if (edad > 18) 
-                  {
-                    document.write("Eres mayor de edad");
-                  }
-                else
-                  {
-                    document.write ("Aún eres joven!");
-                    document.write ("<br>Te faltan: ");
-                    document.write(18-edad);
-                    document.write(" años para poder votar.<br>");
-                  }  
-              }      
-
-
-
-            
-        // switch
+<head>
+<title>MI QUINTA PAGINA</title>
+  <link rel="stylesheet" href="tres.css">
+</head>
+<body>
+<h1> Mi quinta WEB </h1>
+  <script>
+    var edad = prompt ( "escribe tu edad");
+    edad = Number(edad);
+   if (edad == 18)
+     {
+      document.write ("TIENES 18 AÑOS FELICIDADES");
+     }
+    else  {
+    
+          if (edad > 18)
+             {        
+                 document.write ("Eres mayor de edad");
+             }
+          else {
+                document.write (" Eres menor de edad");
+                document.write ("<br> Te faltan: ");
+                 document.write (18-edad);
+                 document.write (" años para poder votar.<br>");
+              }                  
+        }   
+     // switch
         var dia = prompt ("Escribe un numero del 1 al 12: ");
         //var diaNombre = "ENERO";
        dia = Number(dia);
@@ -85,6 +80,6 @@
         document.write ("<br>");
         document.write ("Es: "+diaNombre);
         document.write ("<br><br><br>");
-    </script>
+  </script>
 </body>
 </html>
