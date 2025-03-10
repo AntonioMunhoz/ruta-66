@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprobación de Números Pares</title>
+    <script>
+        // Función que comprueba si un número es par
+        function esPar(numero) {
+            return numero % 2 === 0;
+        }
+
+        // Función que pide un número entre 1 y 4096 y muestra los números pares anteriores
+        function comprobarPares() {
+            // Pedir al usuario un número entre 1 y 4096
+            let numero = parseInt(prompt("Introduce un número entre 1 y 4096:"));
+
+            // Comprobar que el número esté dentro del rango válido
+            if (isNaN(numero) || numero < 1 || numero > 4096) {
+                alert("Por favor, introduce un número válido entre 1 y 4096.");
+                return;
+            }
+
+            // Crear un arreglo con los números pares anteriores al número introducido
+            let pares = [];
+            for (let i = 2; i < numero; i++) {
+                if (esPar(i)) {
+                    pares.push(i);
+                }
+            }
+
+            // Mostrar los números pares encontrados
+            alert("Números pares anteriores a " + numero + ": " + pares.join(", "));
+        }
+    </script>
+</head>
+<body>
+    <h1>Comprobación de Números Pares</h1>
+    <button onclick="comprobarPares()">Comprobar Pares</button>
+</body>
+</html>
