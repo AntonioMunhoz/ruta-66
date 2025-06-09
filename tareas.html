@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Lista de tareas</title>
+    <title>¡Salúdame!</title>
     <style>
         /* Estilos generales para el cuerpo de la página */
         body {
@@ -63,13 +63,13 @@
 <body>
     <!-- Contenedor principal -->
     <div class="contenedor">
-        <h1>Lista de tareas</h1>
+        <h1>Apunta aquí tus tareas</h1>
 
         <!-- Campo de entrada para el nombre del usuario -->
-        <input type="text" id="entradaTareas" placeholder="Escribe aquí tus tareas"><br>
+        <input type="text" id="entradaNombre" placeholder="Teclea tus tareas aquí"><br>
 
         <!-- Botón para generar el saludo -->
-        <button id="botonApuntar">Apuntar</button>
+        <button id="botonSaludar">Apuntar</button>
 
         <!-- Área donde se mostrará el mensaje -->
         <div id="mensaje"></div>
@@ -79,20 +79,20 @@
         var nombre, mensajeDiv;
 
         // Esperamos a que se haga clic en el botón
-        document.getElementById('botonApuntar').addEventListener('click', function() {
+        document.getElementById('botonSaludar').addEventListener('click', function() {
 
             // Obtenemos el valor del input (lo que el usuario ha escrito)
-            nombre = document.getElementById('entradaTareas').value;
+            nombre = document.getElementById('entradaNombre').value;
             // Referencia al elemento donde mostraremos el mensaje
             mensajeDiv = document.getElementById('mensaje');
 
-            // Si el usuario escribió algo, apuntamos
+            // Si el usuario escribió algo, saludamos
             if (nombre) {
-                mensajeDiv.textContent = ("nombre");
+                mensajeDiv.textContent = (" + nombre + ");
             } 
             // Si el campo está vacío, le pedimos que escriba su nombre
             else {
-                mensajeDiv.textContent = ("¡A que esperas para apuntar tus tareas!!");
+                mensajeDiv.textContent = ("Apunta tus tareas!!");
             }
         });
     </script>
