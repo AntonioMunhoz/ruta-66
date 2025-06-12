@@ -72,9 +72,8 @@
             // Si el campo está vacío, le pedimos que escriba su nombre
             else {
                 mensajeDiv.textContent = ('<i>Apunta tus tareas!!</i>');
-            }            
-
-        };
+            } 
+           };
     </script>    
 </head>
 
@@ -87,7 +86,7 @@
         <input type="text" id="entradaTarea" placeholder="Teclea una nueva tarea aquí"><br>
 
         <!-- Botón para generar el saludo -->
-        <button id="botonSaludar">Apuntar</button>
+        <button id="botonApuntar">Apuntar</button>
 
         <!-- Área donde se mostrará el mensaje -->
         <h3>Tareas:</h3>
@@ -96,19 +95,15 @@
     <script>
         // Declaramos las variables que usaremos globalmente
         var tarea, mensajeDiv;
-
         // Esperamos a que se haga clic en el botón
-        document.getElementById('botonSaludar').addEventListener('click', function() {
-
+        document.getElementById('botonApuntar').addEventListener('click', function() {
             // Obtenemos el valor del input (lo que el usuario ha escrito)
             tarea = document.getElementById('entradaTarea').value;
             //Añadimos tarea a arra de tareas
             tareas.push (tarea);
-            // Referencia al elemento donde mostraremos el mensaje
-            mensajeDiv = document.getElementById('mensaje');
-
-            // Si el usuario escribió algo, saludamos
-        });
+            //Ahora las mostramos.
+            mostrarTareas();
+         });
     </script>
 </body>
 </html>
