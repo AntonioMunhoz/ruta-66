@@ -59,7 +59,9 @@
         }
     </style>
     <script>
+        // Declaramos las variables que usaremos globalmente
         var tareas = []; // Declaramos un array vacío que se utilizará para almacenar los números favoritos del usuario.    
+        var tarea, mensajeDiv;        
         function mostrarTareas(){
            mensajeDiv = document.getElementById('mensaje');            
            if (tareas.length >= 1) { //Si hay tareas las mostramos todas
@@ -74,28 +76,7 @@
                 mensajeDiv.textContent = ('<i>Apunta tus tareas!!</i>');
             } 
            };
-    </script>    
-</head>
-
-<body>
-    <!-- Contenedor principal -->
-    <div class="contenedor">
-        <h1>Apunta aquí tus tareas</h1>
-
-        <!-- Campo de entrada para el nombre del usuario -->
-        <input type="text" id="entradaTarea" placeholder="Teclea una nueva tarea aquí"><br>
-
-        <!-- Botón para generar el saludo -->
-        <button id="botonApuntar">Apuntar</button>
-
-        <!-- Área donde se mostrará el mensaje -->
-        <h3>Tareas:</h3>
-        <div id="mensaje"></div>
-    </div>
-    <script>
-        // Declaramos las variables que usaremos globalmente
-        var tarea, mensajeDiv;
-        // Esperamos a que se haga clic en el botón
+        // Añadimos evento al botón de apuntar tareas y esperamos a que se haga clic en el botón
         document.getElementById('botonApuntar').addEventListener('click', function() {
             // Obtenemos el valor del input (lo que el usuario ha escrito)
             tarea = document.getElementById('entradaTarea').value;
@@ -103,7 +84,21 @@
             tareas.push (tarea);
             //Ahora las mostramos.
             mostrarTareas();
-         });
-    </script>
+         });        
+    </script>    
+</head>
+
+<body>
+    <!-- Contenedor principal -->
+    <div class="contenedor">
+        <h1>Apunta aquí tus tareas</h1>
+        <!-- Campo de entrada para la tarea -->
+        <input type="text" id="entradaTarea" placeholder="Teclea una nueva tarea aquí"><br>
+        <!-- Botón para apuntar la tarea -->
+        <button id="botonApuntar">Apuntar</button>
+        <!-- Área donde se mostrarán las tareas -->
+        <h3>Tareas:</h3>
+        <div id="mensaje"></div>
+    </div>
 </body>
 </html>
