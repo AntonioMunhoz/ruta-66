@@ -70,9 +70,11 @@
         function apuntarTarea(){
         // Obtenemos el valor del input (lo que el usuario ha escrito como tarea)
             tarea = document.getElementById('entradaTarea').value;
-            //Añadimos tarea a array de tareas si ha escrito algo
+            //Añadimos tarea a array de tareas si ha escrito algo, si no hacemos una alerta
             if (tarea === "")
-            {alert('¡No has escrito nada como tarea!');}
+            {
+                alert('¡No has escrito nada como tarea!');
+            }
             else
             {
                 //Lo añadimos al array de tareas
@@ -87,7 +89,6 @@
             }
 
         }
-         //});
     </script>
 </head>
 
