@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>¡Salúdame!</title>
+    <title>Tareas</title>
     <style>
         /* Estilos generales para el cuerpo de la página */
         body {
@@ -60,6 +60,21 @@
     </style>
     <script>
         var tareas = []; // Declaramos un array vacío que se utilizará para almacenar los números favoritos del usuario.    
+        function mostrarTareas(){
+           mensajeDiv = document.getElementById('mensaje');            
+           if (tareas.length >= 1) { //Si hay tareas las mostramos todas
+               mensajeDiv.appendChild('<ul>');
+               tareas.forEach((element) => {
+                      mensajeDiv.appendChild('<li type="circle">'+element+'</li>')
+                      }; 
+               mensajeDiv.appendChild('</ul>');             
+            } 
+            // Si el campo está vacío, le pedimos que escriba su nombre
+            else {
+                mensajeDiv.textContent = ('<i>Apunta tus tareas!!</i>');
+            }            
+
+        };
     </script>    
 </head>
 
@@ -69,7 +84,7 @@
         <h1>Apunta aquí tus tareas</h1>
 
         <!-- Campo de entrada para el nombre del usuario -->
-        <input type="text" id="entradaNombre" placeholder="Teclea tus tareas aquí"><br>
+        <input type="text" id="entradaTarea" placeholder="Teclea una nueva tarea aquí"><br>
 
         <!-- Botón para generar el saludo -->
         <button id="botonSaludar">Apuntar</button>
@@ -80,24 +95,19 @@
     </div>
     <script>
         // Declaramos las variables que usaremos globalmente
-        var nombre, mensajeDiv;
+        var tarea, mensajeDiv;
 
         // Esperamos a que se haga clic en el botón
         document.getElementById('botonSaludar').addEventListener('click', function() {
 
             // Obtenemos el valor del input (lo que el usuario ha escrito)
-            nombre = document.getElementById('entradaNombre').value;
+            tarea = document.getElementById('entradaTarea').value;
+            //Añadimos tarea a arra de tareas
+            tareas.push (tarea);
             // Referencia al elemento donde mostraremos el mensaje
             mensajeDiv = document.getElementById('mensaje');
 
             // Si el usuario escribió algo, saludamos
-            if (nombre) {
-                mensajeDiv.textContent = (nombre);
-            } 
-            // Si el campo está vacío, le pedimos que escriba su nombre
-            else {
-                mensajeDiv.textContent = ("Apunta tus tareas!!");
-            }
         });
     </script>
 </body>
